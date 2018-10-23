@@ -6,6 +6,9 @@ var wait = require('gulp-wait');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
+
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
         .pipe(plumber(plumber({
@@ -33,4 +36,12 @@ gulp.task('styles', function () {
 gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
