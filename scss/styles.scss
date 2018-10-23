@@ -35,7 +35,7 @@
 
 // Define base and accent colors
 // TODO change base color
-$base-color: #3498db;
+$base-color: #338333;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -351,7 +351,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/background.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -366,18 +366,17 @@ footer {
     text-align: center;
 
     img {
-        height: 250px;
-        padding-top: 5em;
+        padding-top: 0;
     }
 
     h1, h2 {
-        margin: 0;
+        margin: 10px;
     }
 
     h1 {
         color: #fff;
         font-weight: 900;
-        font-size: 5em;
+        font-size: 3.5em; // 5
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -385,8 +384,9 @@ footer {
 
     h2 {
         color: lighten($base-color, 25%);
-        font-weight: 500;
-        font-size: 2.25em;
+        //color: #73e345;
+        font-weight: 600; // 500
+        font-size: 2.5em; // 2.25
         margin-bottom: 15px;
     }
 }
@@ -399,7 +399,8 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0.3);
+    // background: rgba($base-color-hover, 0.8);
     z-index: 1;
 }
 
@@ -937,6 +938,10 @@ footer {
         li {
             display: block;
             margin-bottom: 10px;
+
+            a {
+                font-weight: bold;
+            }
         }
     }
 
