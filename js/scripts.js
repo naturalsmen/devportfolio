@@ -35,7 +35,7 @@
         var curr = $(this).scrollTop();
         
         // set distance user needs to scroll before we fadeIn navbar
-        if(prev > curr || $(this).scrollTop() < 10){
+        if(prev > curr || $(this).scrollTop() <= 0){
             $('header').fadeIn();
         } else {
             $('header').fadeOut();
