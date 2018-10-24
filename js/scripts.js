@@ -1,5 +1,9 @@
 (function($) {
+    var isMobile = false;
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobile = true;
+    }
     // Remove no-js class
     $('html').removeClass('no-js');
 
@@ -17,7 +21,8 @@
             scrollTop: scrollDistance + 'px'
         }, Math.abs(window.pageYOffset - $(heading).offset().top) / 3);
 
-        $('header').fadeOut();
+        if(!isMobile)
+            $('header').fadeOut();
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
@@ -27,21 +32,22 @@
 
     // hide/show header on scroll
     // $("header").hide();
+    if(!isMobile) {
+        var prev = $(window).scrollTop();
     
-    var prev = $(window).scrollTop();
-    
-    // fade in header
-    $(window).scroll(function () {
-        var curr = $(this).scrollTop();
-        
-        // set distance user needs to scroll before we fadeIn navbar
-        if(prev > curr || $(this).scrollTop() <= 0){
-            $('header').fadeIn();
-        } else {
-            $('header').fadeOut();
-        }
-            prev = curr;
-    });
+        // fade in header
+        $(window).scroll(function () {
+            var curr = $(this).scrollTop();
+            
+            // set distance user needs to scroll before we fadeIn navbar
+            if(prev > curr || $(this).scrollTop() <= 0){
+                $('header').fadeIn();
+            } else {
+                $('header').fadeOut();
+            }
+                prev = curr;
+        });
+    }
 
     // Scroll to top
     $('#to-top').click(function() {
