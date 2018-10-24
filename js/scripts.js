@@ -17,10 +17,30 @@
             scrollTop: scrollDistance + 'px'
         }, Math.abs(window.pageYOffset - $(heading).offset().top) / 3);
 
+        $('header').fadeOut();
+
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
             $('header, body').removeClass('active');
         }
+    });
+
+    // hide/show header on scroll
+    // $("header").hide();
+    
+    var prev = $(window).scrollTop();
+    
+    // fade in header
+    $(window).scroll(function () {
+        var curr = $(this).scrollTop();
+        
+        // set distance user needs to scroll before we fadeIn navbar
+        if(prev > curr || $(this).scrollTop() < 10){
+            $('header').fadeIn();
+        } else {
+            $('header').fadeOut();
+        }
+            prev = curr;
     });
 
     // Scroll to top

@@ -19,7 +19,7 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
-    <header>
+    <header class="sticky">
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
@@ -55,7 +55,7 @@
                 alt="head shot"
             />
             <h1>Eric<br>Chuu-Hsiang<br>Hung</h1>
-            <h2>Back End Web Developer</h2>
+            <h2>Back End Developer</h2>
             <a href="#" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -90,12 +90,12 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="October 2018 – Current">
+            <div data-date="October 2018 – Present">
                 <h3>Trend Micro</h3>
                 <h4>Back End Developer; Contract</h4>
                 <ul>
                     <li>
-                        Mocked web APIs from third parties to boost autotesting efficiency.
+                        Mocked web APIs from third parties to get specified result to boost autotesting efficiency.
                     </li>
                 </ul>
             </div>
@@ -115,10 +115,10 @@
                 <h4>R Developer</h4>
                 <ul>
                     <li>
-                        Refactored xts and dependent packages framework.
+                        Refactored xts and dependent packages framework. Improved flexibility and consistency of charting APIs.
                     </li>
                     <li>
-                        Used GitHub for source code versioning following git flow model.
+                        Used GitHub for source code versioning following git flow model. Completed project with full control to the timeline.
                     </li>
                     <li>
                         Wrote documentation and vignettes for APIs.
@@ -134,10 +134,10 @@
                         Built parallel computing environment to decrease computing time by 80%.
                     </li> 
                     <li>
-                        Used Random Forest algorithm to predict recovery rate of debts.
+                        Used Random Forest algorithm to predict recovery rate of debts. Achieved 83% accracy rate.
                     </li> 
                     <li>
-                        Interpreted complex simulation data using statistical methods.
+                        Interpreted complex simulation data using statistical methods. 
                     </li>
                     <li>
                         Developed customer segmentation algorithm to enhance recovery rate.
@@ -170,9 +170,14 @@
             <h3>National Chiao Tung University</h3>
             <span class="education-date">Sept 2014 - June 2018</span>
             <h4>MBA</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
+            <ul>
+                <li>
+                    Thesis: "Tail Risk Estimation Using the Generalized Extreme Value Distribution"
+                </li>
+                <li>
+                    CS-related coursework: Intro to Computer Network, Intro to Operating System, Discrete Math, Object-Oriented Programming, Data Structures, Intro to Computers and Programming
+                </li>
+            </ul>
         </div>
         <!-- End .education-block -->
 
@@ -180,9 +185,13 @@
             <h3>National Cheng Kung University</h3>
             <span class="education-date">Sept 2010 - June 2014</span>
             <h4>BBA in Statistics</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
+            <ul>
+                <li>
+                    Independent Study: "The Influence of MRSA (a skin disease) on Athletes in Various Fields"
+                </li>
+                <li>
+                    CS-related coursework: Calculus, Linear Algebra, Intro to Computer Programming, Probability
+            </ul>
         </div>
         <!-- End .education-block -->
     </div>
@@ -194,15 +203,15 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/vertical-GSoC-logo.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>plot.xts for Performance and Risk</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            This is a Google Summer of Code 2016 project. The project follows agile development principle with 2 weeks a sprint. xts::plot.xts is a strong engine for statistical and financial charting. However, there are several APIs still using basic R graphical functions which are inflexible, tedious. I refactored and integrated dependent packages, e.g. quantmod, to enhance the flexibility and efficiency on charting. Then I wrote API documentation and created vignette for better understanding.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://gist.github.com/naturalsmen/039fad3e19fa9585643a7aacd952c666" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -214,11 +223,13 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Optimizing Recovery Rate of Debt</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            The project is from PICK International Asset Management Corp.. My goal was to maximize the recovery rate of debt. Firstly, I conducted k-means clustering to look into the latent factors sharing all debtors. Secondly, I trained the Random Forest, RNN and Logistic models accordingly and decreased training time with GPU computing. Last but not least, I A/B tested the model to compare the prediction accuracy rate of them. The result ended up with about a 20% rise in profit with RNN.
                         </p>
+                        <!--
                         <a href="#">View Project</a>
+                        -->
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -244,6 +255,7 @@
             <li>jQuery</li>
             <li>Node.js</li>
             <li>Express.js</li>
+            <li>React</li>
             <li>MySQL</li>
             <li>Git</li>
         </ul>
