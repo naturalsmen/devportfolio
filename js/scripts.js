@@ -104,8 +104,17 @@
     // Load additional projects
     $('#view-more-projects').click(function(e){
         e.preventDefault();
-        $(this).fadeOut(300, function() {
+        $(this).fadeOut(200, function() {
             $('#more-projects').fadeIn(300);
+            $('#view-less-projects').fadeIn(300);
+        });
+    });
+
+    $('#view-less-projects').click(function(e){
+        e.preventDefault();
+        $(this).fadeOut(200, function() {
+            $('#more-projects').fadeOut(300);
+            $('#view-more-projects').fadeIn(300);
         });
     });
 
