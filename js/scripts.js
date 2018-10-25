@@ -65,6 +65,14 @@
         }, 500);
     });
 
+    // click to show more projects
+    $('#project-lead-down span').click(function() {
+        var scrollDistance = $('#project-lead').next().offset().top;
+        $('html, body').animate({
+            scrollTop: scrollDistance + 'px'
+        }, 500);
+    });
+
     // Create timeline
     $('#experience-timeline').each(function() {
 
