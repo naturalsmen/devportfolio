@@ -361,6 +361,7 @@ footer {
     background-size: cover;
     padding: 15px;
     overflow: hidden;
+    z-index: 0;
 }
 
 #lead-content {
@@ -1059,6 +1060,6 @@ footer {
 */
 
 #chatbot {
-    position: relative;
+    position: fixed;
     z-index: 999;
 }
