@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Eric Hung | Software Engineer | Data Analyst</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Hi, I'm Eric. I'm a self-motivated, optimistic person interested in data analysis and web development. I got my Bachelor's degree in Statistics and later MBA. Now I am working as back end developer in Trend Micro for API development and database management. I've been writing backtest system on stock in R and pattern recognition program in Python Tensorflow at leisure. Love to watch zombie movies. <i>Shawn of the Dead</i> is my favorite. Used to be in university badminton team, now playing only once a week and workout twice a week to get rid of my muffin top. Plan to pursue a MSCS/MCS program in the near future.
+                        I am a Software Engineer/Data Analyst seeking different types of creativity in Engineering, Statistics and Business. I have enjoyed being able to apply what I learned in classes to my application and sharing my applications to benefit the public. In my spare time, I usually do side project to learn new techniques and make my life easier. "<a href="#backtestsystem">Backtest System</a>" is one of the side projects I developed in my sophomore year of college. I am currently working on an iOS app with Human Posture Synthesis technique inspired by Caroline Chan's "Everybody Dance Now". In addition, I am planning to pursue a MS program in Computer Science in the near future. My primary research objective and interest are in the area of software engineering, computer vision and human-computer interaction (HCI).
                     </p>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                     <div class="project-info">
                         <h3>plot.xts for Performance and Risk</h3>
                         <p>
-                            This is a Google Summer of Code 2016 project. The project follows agile development principle with 2 weeks a sprint. xts::plot.xts is a strong engine for statistical and financial charting. However, there are several APIs still using basic R graphical functions which are inflexible, tedious. I refactored and integrated dependent packages, e.g. quantmod, to enhance the flexibility and efficiency on charting. Then I wrote API documentation and created vignette for better understanding.
+                            This is a Google Summer of Code project in 2016. It aimed at improving popular quantitative visualization R packages. I developed a list of visualization functions in the packages and refactored to integrate new functionality. New code was consistent and backwards compatible with interfaces of other functions in its respective package. Also, I wrote a vignette that showed how the functions were used with extended examples and built interactive examples on a web application. As a result, I successfully refactored all frameworks in time and the APIs became more understandable and powerful.
                         </p>
                         <a href="https://gist.github.com/naturalsmen/039fad3e19fa9585643a7aacd952c666" target="_blank">View Project</a>
                     </div>
@@ -226,17 +226,15 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/rstudio.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Recovery Rate of Debt Optimization</h3>
-                        <p>
-                            The project is from PICK International Asset Management Corp.. My goal was to maximize the recovery rate of debt. Firstly, I conducted k-means clustering to look into the latent factors sharing all debtors. Secondly, I trained the Random Forest, RNN and Logistic models accordingly and decreased training time with GPU computing. Last but not least, I A/B tested the model to compare the prediction accuracy rate of them. The result ended up with about a <b>20%</b> rise in profit with RNN.
-                        </p>
-                        <!--
-                        <a href="#">View Project</a>
-                        -->
+                    <div class="project-info" id="backtestsystem">
+                        <h3>Backtest System</h3>
+                            <p>
+                                It is a side project I wrote in my sophomore year in colloge using R and Shiny. Users can backtest their strategy on stocks online and get instant statistical results. There is alreay a built-in strategy so users can directly go to Backtest tab to try out. The system also offers advanced validation functionality called Walk Forward Analysis (WFA). After users setup the train and test dataset time interval, the strategy will be automatically applied to the time one day ahead of the interval iteratively. The results are collected and analysis report will be given. There is also chatroom that allows users to discuss with others. Other features are still in development but will be activated soon.
+                            </p>
+                        <a href="https://naturalsmen.shinyapps.io/Backtest" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -255,15 +253,17 @@
                 <div id="more-projects">
                     <div class="project shadow-large">
                         <div class="project-image">
-                            <img src="images/shiny.png" />
+                            <img src="images/project.jpg" />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
-                            <h3>Backtest System</h3>
+                            <h3>Recovery Rate Optimization</h3>
                             <p>
-                                It's an ongoing project wrote in R and deployed to Shiny server for interest. Users can backtest their strategy on stocks online and get instant statistical results. There's alreay a built-in strategy so users can directly go to Backtest tab to try out. The system also offers advanced validation functionality called Walk Forward Analysis (WFA). After users setup the train and test dataset time interval, the strategy will be automatically applied to the time one day ahead of the interval iteratively. The results are collected and analysis report will be given. There's also chatroom that allows users to discuss with others. Other features are still in development but will be activated soon.
+                                The project is from my half-year Data Analyst intern in PICK International Asset Management. The company’s main business was to bid on real estate property and randomly assigned it to a coordinator for resale. My task was to optimize the distributing process by matching certain types of cases to suitable coordinators to maximize profit. I used two-stage processing pipeline for this purpose. In the first stage, I used hierarchical clustering to retrieve features and classify the assets into five classes. Next, I implemented neural networks algorithm on each cluster in predicting the profits. However, compared to the high accuracy rate on train dataset, the accuracy rates on test sets were low. I did a quick research on the issue and found overfitting was the major cause for the problem. I used L2 regularization to impose a penalty on the size of coefficients. Hence, the potential of overfitting was reduced. As a result, the model achieved an <b>83%</b> accuracy rate on the test sets in average.
                             </p>
-                            <a href="https://naturalsmen.shinyapps.io/Backtest" target="_blank">View Project</a>
+                        <!--
+                            <a href="#">View Project</a>
+                        -->
                         </div>
                         <!-- End .project-info -->
                     </div>
